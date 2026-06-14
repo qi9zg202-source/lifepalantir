@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Life Palantir · Personal Operating System</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <aside class="rail">
+      <a class="brand" href="/">
+        <span class="brand-mark">LP</span>
+        <span>
+          <strong>Life Palantir</strong>
+          <small>Personal OS</small>
+        </span>
+      </a>
+      <nav aria-label="主导航">
+        <a class="active" href="#mission">Mission</a>
+        <a href="#subsystems">Subsystems</a>
+        <a href="#ontology">Ontology</a>
+        <a href="#decisions">Decisions</a>
+        <a href="#actions">Actions</a>
+      </nav>
+      <div class="rail-card">
+        <span>Operating Model</span>
+        <strong>Ontology + Action Loop</strong>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="mission-header" id="mission">
+        <div>
+          <p class="label">Master Control Plane</p>
+          <h1>整个人生的 Palantir 平台</h1>
+          <p>
+            将设备与服务、人体属性、每日饮食和温哥华迁移纳入一个可追踪、可决策、可执行的生命管理操作系统。
+          </p>
+        </div>
+        <div class="command-card">
+          <span>System State</span>
+          <strong id="systemState">Loading</strong>
+          <small id="dbPath">等待 SQLite 状态</small>
+        </div>
+      </header>
+
+      <section class="metric-strip" aria-label="关键状态">
+        <article>
+          <span>Subsystems</span>
+          <strong id="metricSubsystems">--</strong>
+          <small>已纳管项目</small>
+        </article>
+        <article>
+          <span>Ontology Objects</span>
+          <strong id="metricObjects">--</strong>
+          <small>核心对象</small>
+        </article>
+        <article>
+          <span>Decisions</span>
+          <strong id="metricDecisions">--</strong>
+          <small>决策记录</small>
+        </article>
+        <article>
+          <span>Open Actions</span>
+          <strong id="metricActions">--</strong>
+          <small>待执行动作</small>
+        </article>
+      </section>
+
+      <section class="panel" id="subsystems">
+        <div class="section-heading">
+          <div>
+            <p class="label">Subsystem Registry</p>
+            <h2>分系统纳管</h2>
+          </div>
+          <p>每个子项目保留自己的边界，Life Palantir 只负责统一调度、决策和行动闭环。</p>
+        </div>
+        <div id="subsystemRows" class="subsystem-list"></div>
+      </section>
+
+      <section class="split">
+        <section class="panel" id="ontology">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Ontology</p>
+              <h2>对象图谱</h2>
+            </div>
+          </div>
+          <div id="ontologyMap" class="ontology-map"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Integrations</p>
+              <h2>连接状态</h2>
+            </div>
+          </div>
+          <div id="integrationRows" class="integration-list"></div>
+        </section>
+      </section>
+
+      <section class="split">
+        <section class="panel" id="decisions">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Decision Queue</p>
+              <h2>决策队列</h2>
+            </div>
+          </div>
+          <div id="decisionRows" class="decision-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Create Decision</p>
+              <h2>新增决策</h2>
+            </div>
+          </div>
+          <form id="decisionForm" class="decision-form">
+            <label>
+              标题
+              <input name="title" required placeholder="例如：把防晒衣纳入 LifeToolSystem 评估" />
+            </label>
+            <label>
+              分系统
+              <select name="subsystem_id" id="decisionSubsystem"></select>
+            </label>
+            <label>
+              类型
+              <select name="decision_type">
+                <option value="architecture">architecture</option>
+                <option value="product">product</option>
+                <option value="health">health</option>
+                <option value="migration">migration</option>
+                <option value="manual">manual</option>
+              </select>
+            </label>
+            <label>
+              影响
+              <select name="impact">
+                <option value="high">high</option>
+                <option value="medium">medium</option>
+                <option value="low">low</option>
+              </select>
+            </label>
+            <label class="wide">
+              判断依据
+              <textarea name="rationale" required rows="4" placeholder="写清楚证据、收益、风险和为什么现在要做"></textarea>
+            </label>
+            <label class="wide">
+              下一步动作
+              <textarea name="next_action" rows="3" placeholder="下一步可执行动作"></textarea>
+            </label>
+            <button type="submit">写入决策库</button>
+            <p id="formStatus" role="status"></p>
+          </form>
+        </section>
+      </section>
+
+      <section class="panel" id="actions">
+        <div class="section-heading">
+          <div>
+            <p class="label">Action Ledger</p>
+            <h2>行动台账</h2>
+          </div>
+          <p>决策不落地就不是操作系统。这里保留下一步执行项。</p>
+        </div>
+        <div id="actionRows" class="action-table"></div>
+      </section>
+    </main>
+
+    <script src="static/app.js"></script>
+  </body>
+</html>
