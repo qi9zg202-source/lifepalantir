@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lifepalantir · soul.html</title>
+<style>
+:root {
+  --sap-blue: #0a6ed1;
+  --sap-blue-dark: #0854a0;
+  --sap-shell: #354a5f;
+  --sap-bg: #f7f7f7;
+  --sap-card: #ffffff;
+  --sap-line: #d9d9d9;
+  --sap-text: #223548;
+  --sap-muted: #6a6d70;
+  --sap-green: #107e3e;
+  --sap-red: #bb0000;
+  --sap-yellow: #e9730c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--sap-bg); color: var(--sap-text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Arial, sans-serif; letter-spacing: 0; }
+a { color: var(--sap-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.shell { height: 48px; background: var(--sap-shell); color: #fff; display: flex; align-items: center; padding: 0 24px; font-weight: 700; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 24px; }
+.object { background: var(--sap-card); border: 1px solid var(--sap-line); border-radius: 4px; padding: 22px 24px; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.object p { margin: 8px 0 0; color: var(--sap-muted); max-width: 980px; line-height: 1.55; }
+h1 { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.pill { border: 1px solid #b6d0ee; color: var(--sap-blue-dark); background: #eef6ff; border-radius: 2px; padding: 5px 8px; font-size: 12px; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(7, minmax(120px, 1fr)); gap: 12px; margin: 18px 0; }
+.kpi { background: var(--sap-card); border: 1px solid var(--sap-line); border-radius: 4px; padding: 14px; min-height: 78px; }
+.kpi span { display: block; color: var(--sap-muted); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.kpi strong { display: block; margin-top: 8px; font-size: 26px; color: var(--sap-text); }
+.panel { background: var(--sap-card); border: 1px solid var(--sap-line); border-radius: 4px; overflow: hidden; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 16px; border-bottom: 1px solid var(--sap-line); background: #fff; }
+.panel-head h2 { margin: 0; font-size: 18px; }
+.panel-head span { color: var(--sap-muted); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th { background: #f2f2f2; color: #32363a; border-bottom: 1px solid var(--sap-line); text-align: left; font-size: 12px; padding: 10px 12px; text-transform: uppercase; }
+td { border-bottom: 1px solid #ececec; padding: 11px 12px; vertical-align: top; line-height: 1.45; word-break: break-word; }
+tr:hover td { background: #f7fbff; }
+td:nth-child(1) { width: 118px; }
+td:nth-child(2) { width: 210px; }
+td:nth-child(5), th:nth-child(5) { width: 116px; }
+small { display: block; color: var(--sap-muted); margin-top: 3px; }
+.tag { display: inline-block; min-width: 76px; text-align: center; border: 1px solid #d1e7ff; background: #f3f9ff; color: var(--sap-blue-dark); border-radius: 2px; padding: 3px 6px; font-size: 12px; font-weight: 700; }
+.status { display: inline-block; border-radius: 2px; padding: 4px 7px; font-size: 12px; font-weight: 700; }
+.status.good { color: var(--sap-green); background: #effaf2; border: 1px solid #bde7c7; }
+.status.missing { color: var(--sap-red); background: #fff1f1; border: 1px solid #ffd0d0; }
+.muted { color: var(--sap-muted); }
+.footer { color: var(--sap-muted); font-size: 12px; padding: 16px 2px; }
+@media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } .wrap { padding: 14px; } table { table-layout: auto; } th:nth-child(3), td:nth-child(3) { display:none; } }
+</style>
+</head>
+<body>
+<header class="shell">soul.html · Core Design Index</header>
+<main class="wrap">
+<section class="object">
+<h1>lifepalantir</h1>
+<p>This page is the lowest-level design and development index for this project. It centralizes the core governance files, design files, PRD files, strategy report, and project entry documents under one clean SAP-style navigation surface.</p>
+<div class="meta">
+<span class="pill">Generated 2026-07-07</span>
+<span class="pill">Ready links 8</span>
+<span class="pill">Missing expected files 4</span>
+<span class="pill">SAP UI disciplined layout</span>
+</div>
+</section>
+<section class="grid"><div class="kpi"><span>Governance</span><strong>2</strong></div><div class="kpi"><span>Design</span><strong>1</strong></div><div class="kpi"><span>PRD</span><strong>0</strong></div><div class="kpi"><span>Strategy</span><strong>1</strong></div><div class="kpi"><span>Entry</span><strong>1</strong></div><div class="kpi"><span>Config</span><strong>0</strong></div><div class="kpi"><span>Reference</span><strong>3</strong></div></section>
+<section class="panel">
+<div class="panel-head"><h2>Core File Index</h2><span>Click any linked path to open the governing artifact.</span></div>
+<table>
+<thead><tr><th>Domain</th><th>Artifact</th><th>Detected Title</th><th>Path</th><th>Status</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="tag">Entry</span></td>
+<td><strong>Project README</strong><small>Core</small></td>
+<td>Life Palantir</td>
+<td><a href="README.md">README.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Governance</span></td>
+<td><strong>Agent Rules</strong><small>Core</small></td>
+<td>CLAUDE.md</td>
+<td><a href="CLAUDE.md">CLAUDE.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Governance</span></td>
+<td><strong>Codex Rules</strong><small>Core</small></td>
+<td>Agent Instructions</td>
+<td><a href="AGENTS.md">AGENTS.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Design</span></td>
+<td><strong>System Design</strong><small>Core</small></td>
+<td>Life Palantir Design</td>
+<td><a href="design.md">design.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">PRD</span></td>
+<td><strong>Product Requirements</strong><small>Expected</small></td>
+<td>prd.md</td>
+<td><span class="muted">prd.md</span></td>
+<td><span class="status missing">Not found</span></td>
+</tr><tr>
+<td><span class="tag">Strategy</span></td>
+<td><strong>Product Strategy Report</strong><small>Core</small></td>
+<td>Product Strategy &amp; Competitiveness Analysis产品战略与竞争力分析报告</td>
+<td><a href="Product%20Strategy%20&%20Competitiveness%20Analysis%E4%BA%A7%E5%93%81%E6%88%98%E7%95%A5%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%8A%9B%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html">Product Strategy &amp; Competitiveness Analysis产品战略与竞争力分析报告.html</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Entry</span></td>
+<td><strong>HTML Readme</strong><small>Expected</small></td>
+<td>readme.html</td>
+<td><span class="muted">readme.html</span></td>
+<td><span class="status missing">Not found</span></td>
+</tr><tr>
+<td><span class="tag">Config</span></td>
+<td><strong>Package Manifest</strong><small>Expected</small></td>
+<td>package.json</td>
+<td><span class="muted">package.json</span></td>
+<td><span class="status missing">Not found</span></td>
+</tr><tr>
+<td><span class="tag">Config</span></td>
+<td><strong>Project Config</strong><small>Expected</small></td>
+<td>vibecoding.config.js</td>
+<td><span class="muted">vibecoding.config.js</span></td>
+<td><span class="status missing">Not found</span></td>
+</tr><tr>
+<td><span class="tag">Reference</span></td>
+<td><strong>claudecode-development-standard.md</strong><small>Discovered</small></td>
+<td>Claude Code Development Standard</td>
+<td><a href="docs/claudecode-development-standard.md">docs/claudecode-development-standard.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Reference</span></td>
+<td><strong>database.md</strong><small>Discovered</small></td>
+<td>Database Design</td>
+<td><a href="docs/database.md">docs/database.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr><tr>
+<td><span class="tag">Reference</span></td>
+<td><strong>palantir-design-standard.md</strong><small>Discovered</small></td>
+<td>Palantir-Inspired Design Standard</td>
+<td><a href="docs/palantir-design-standard.md">docs/palantir-design-standard.md</a></td>
+<td><span class="status good">Linked</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<div class="footer">soul.html is a project-owned index. It does not replace CLAUDE.md, design.md, PRD files, or the Product Strategy & Competitiveness Analysis report; it points to them.</div>
+</main>
+</body>
+</html>
