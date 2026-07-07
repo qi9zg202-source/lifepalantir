@@ -49,3 +49,7 @@ PORT=8020 python3 server.py
 curl -s http://127.0.0.1:8020/api/health
 curl -s http://127.0.0.1:8020/api/bootstrap
 ```
+
+## Product Strategy & Competitiveness Analysis Report Standard
+
+Every local design/development project must keep a project-specific `Product Strategy & Competitiveness Analysis产品战略与竞争力分析报告.html` artifact. If the report has not been written yet, create a lightweight empty HTML placeholder with this exact filename and link it from `README.md`. Treat this as a required governance artifact for product strategy and competitiveness review.

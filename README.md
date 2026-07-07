@@ -63,3 +63,8 @@ This first scaffold includes:
 └── data/
     └── .gitkeep
 ```
+
+## Product Strategy & Competitiveness Analysis
+
+- Standard report: `Product Strategy & Competitiveness Analysis产品战略与竞争力分析报告.html`
+- Rule: every local design/development project keeps a project-specific `Product Strategy & Competitiveness Analysis产品战略与竞争力分析报告.html` file. When the report is not yet written, this file may remain as a lightweight empty HTML placeholder until the real analysis is produced.

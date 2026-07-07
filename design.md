@@ -98,3 +98,7 @@ Core objects:
 - action approval;
 - recurring audits;
 - goal-risk forecasting.
+
+## Product Strategy & Competitiveness Analysis Report Standard
+
+The project document set must include `Product Strategy & Competitiveness Analysis产品战略与竞争力分析报告.html`. This artifact is the canonical place for product strategy and competitiveness analysis. Until a real analysis is authored, an empty HTML placeholder with the exact standard filename is acceptable, but it must be visible from the project README.
