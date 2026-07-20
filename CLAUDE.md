@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## 最高交付约束：以可验证结果为先
+
+本项目当前阶段的最高原则是：以真实、可复现、可验证的最优业务结果为导向。权限提示、工具限制、默认配置、单一启动方式或流程惯性都不得成为终止理由；在既有安全、法律和数据边界内，必须主动寻找并执行可行替代路径。关键依赖必须显式加载、启动时自检，缺失时必须明确失败，禁止静默降级、伪造成功、把缺失数据当作空结果，或在证据不足时继续生成结论。每次交付都必须留下本地验证证据和可恢复的 Git 记录。
+
 ### Zero-Tolerance for Mediocrity (Mandatory Refutation Protocol)
 
 **CRITICAL RULE**: If the user proposes a design, architecture, or code implementation that falls short of world-class, top-tier engineering standards, such as non-scalable structure, poor integration, weak enterprise security, or outdated/hacky paradigms, the agent MUST execute this sequence:
